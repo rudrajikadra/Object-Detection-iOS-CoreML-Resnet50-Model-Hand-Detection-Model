@@ -12,6 +12,8 @@
 		73F96C821FDE5BBB0054AB29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73F96C801FDE5BBB0054AB29 /* Main.storyboard */; };
 		73F96C841FDE5BBB0054AB29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73F96C831FDE5BBB0054AB29 /* Assets.xcassets */; };
 		73F96C871FDE5BBB0054AB29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73F96C851FDE5BBB0054AB29 /* LaunchScreen.storyboard */; };
+		73F96C931FDE6F350054AB29 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 73F96C921FDE6F350054AB29 /* Resnet50.mlmodel */; };
+		73FBD9872003FCC70033D094 /* hand.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 73FBD9862003FCC60033D094 /* hand.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		73F96C831FDE5BBB0054AB29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73F96C861FDE5BBB0054AB29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73F96C881FDE5BBB0054AB29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73F96C921FDE6F350054AB29 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
+		73FBD9862003FCC60033D094 /* hand.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = hand.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				73F96C7C1FDE5BBB0054AB29 /* AppDelegate.swift */,
 				73F96C7E1FDE5BBB0054AB29 /* ViewController.swift */,
+				73FBD9862003FCC60033D094 /* hand.mlmodel */,
+				73F96C921FDE6F350054AB29 /* Resnet50.mlmodel */,
 				73F96C801FDE5BBB0054AB29 /* Main.storyboard */,
 				73F96C831FDE5BBB0054AB29 /* Assets.xcassets */,
 				73F96C851FDE5BBB0054AB29 /* LaunchScreen.storyboard */,
@@ -137,7 +143,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				73F96C7F1FDE5BBB0054AB29 /* ViewController.swift in Sources */,
+				73F96C931FDE6F350054AB29 /* Resnet50.mlmodel in Sources */,
 				73F96C7D1FDE5BBB0054AB29 /* AppDelegate.swift in Sources */,
+				73FBD9872003FCC70033D094 /* hand.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

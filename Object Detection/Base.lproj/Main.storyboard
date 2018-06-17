@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,90 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Object_Detection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXP-Af-qzm">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Object" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icr-x2-FBI">
+                                        <rect key="frame" x="0.0" y="36" width="375" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accuracy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFf-Cg-Obf">
+                                        <rect key="frame" x="0.0" y="70" width="375" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="xFf-Cg-Obf" secondAttribute="trailing" id="5BZ-st-rEC"/>
+                                    <constraint firstItem="xFf-Cg-Obf" firstAttribute="leading" secondItem="KXP-Af-qzm" secondAttribute="leading" id="H1z-xA-NMp"/>
+                                    <constraint firstAttribute="trailing" secondItem="icr-x2-FBI" secondAttribute="trailing" id="Ndy-p8-Xqx"/>
+                                    <constraint firstItem="xFf-Cg-Obf" firstAttribute="top" secondItem="icr-x2-FBI" secondAttribute="bottom" constant="10" id="PDq-gL-eJI"/>
+                                    <constraint firstItem="icr-x2-FBI" firstAttribute="leading" secondItem="KXP-Af-qzm" secondAttribute="leading" id="i2v-hE-DAY"/>
+                                    <constraint firstAttribute="bottom" secondItem="icr-x2-FBI" secondAttribute="bottom" constant="40" id="jZF-jL-c0b"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZfT-1E-Lej">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="133.5"/>
+                                <subviews>
+                                    <switch opaque="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bM7-YE-dqT">
+                                        <rect key="frame" x="163" y="51.5" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switchModel:" destination="BYZ-38-t0r" eventType="valueChanged" id="5e6-wG-abV"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn On For Hand ML Model" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Buz-W7-CNm">
+                                        <rect key="frame" x="19" y="93" width="337.5" height="22"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Buz-W7-CNm" firstAttribute="top" secondItem="bM7-YE-dqT" secondAttribute="bottom" constant="10" id="4m7-UG-bSf"/>
+                                    <constraint firstItem="bM7-YE-dqT" firstAttribute="centerY" secondItem="ZfT-1E-Lej" secondAttribute="centerY" id="8LA-Rg-GP5"/>
+                                    <constraint firstItem="Buz-W7-CNm" firstAttribute="width" secondItem="ZfT-1E-Lej" secondAttribute="width" multiplier="0.9" id="EMy-IT-Wh0"/>
+                                    <constraint firstItem="bM7-YE-dqT" firstAttribute="centerX" secondItem="ZfT-1E-Lej" secondAttribute="centerX" id="WC9-6y-V25"/>
+                                    <constraint firstItem="Buz-W7-CNm" firstAttribute="centerX" secondItem="ZfT-1E-Lej" secondAttribute="centerX" id="YkQ-r2-Al6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="KXP-Af-qzm" secondAttribute="bottom" id="0Qz-3O-E4S"/>
+                            <constraint firstAttribute="trailing" secondItem="ZfT-1E-Lej" secondAttribute="trailing" id="6aM-jv-Z5a"/>
+                            <constraint firstItem="ZfT-1E-Lej" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7z0-W4-ulJ"/>
+                            <constraint firstItem="KXP-Af-qzm" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.15" id="DZm-dC-sfP"/>
+                            <constraint firstAttribute="trailing" secondItem="KXP-Af-qzm" secondAttribute="trailing" id="RJv-A2-pLh"/>
+                            <constraint firstItem="ZfT-1E-Lej" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="V6h-El-BuN"/>
+                            <constraint firstItem="ZfT-1E-Lej" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eQ1-oV-JUn"/>
+                            <constraint firstItem="KXP-Af-qzm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tKf-M8-UTj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="above" destination="ZfT-1E-Lej" id="Dd3-vK-NTh"/>
+                        <outlet property="accuracy" destination="xFf-Cg-Obf" id="k3N-eF-8ll"/>
+                        <outlet property="below" destination="KXP-Af-qzm" id="Qid-tc-VjI"/>
+                        <outlet property="belowView" destination="KXP-Af-qzm" id="uHX-EN-ZYX"/>
+                        <outlet property="objectName" destination="icr-x2-FBI" id="UZc-gk-cVM"/>
+                        <outlet property="switchText" destination="Buz-W7-CNm" id="6J3-yE-R1O"/>
+                        <outlet property="switchToggle" destination="bM7-YE-dqT" id="ol4-bG-hFB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
         </scene>
     </scenes>
 </document>
